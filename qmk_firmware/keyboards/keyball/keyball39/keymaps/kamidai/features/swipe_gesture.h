@@ -60,7 +60,7 @@ void process_swipe_gesture(int16_t x, int16_t y) {
       }
     }
     unregister_code(KC_LCMD);
-    unregister_code(KC_LCTRL);
+    unregister_code(KC_LCTL);
 
     register_code(KC_LALT);
   }
