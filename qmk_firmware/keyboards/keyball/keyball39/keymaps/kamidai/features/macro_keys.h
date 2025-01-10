@@ -163,8 +163,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       static bool is_lt1_lang1_pressed = false;  // LT(1, KC_LANG1)の状態を追跡
 
       // 上位レイヤーから下位レイヤーへ移動できるようにする
-    case LT(1, KC_LANG2):  // レイヤー1へのキー
-    case LT(1, KC_LANG1):  // レイヤー1へのキー
+    case LT(1, KC_LNG2):  // レイヤー1へのキー
+    case LT(1, KC_LNG1):  // レイヤー1へのキー
       if (record->event.pressed) {
         click_timer = timer_read();
         is_lt1_pressed = true;
@@ -301,7 +301,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             tap_code16(G(KC_A));
           }
           if (keycode == SFT_T_S_KC_SCOLON) {
-            tap_code16(S(KC_SCOLON));
+            tap_code16(S(KC_COLON));
           }
         }
       }
